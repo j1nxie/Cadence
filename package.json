@@ -14,7 +14,8 @@
 		"build": "tsc",
 		"lint": "eslint .",
 		"test": "tap",
-		"snap": "tap"
+		"snap": "tap",
+		"prepublish": "tsc"
 	},
 	"dependencies": {},
 	"devDependencies": {
