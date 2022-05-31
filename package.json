@@ -40,6 +40,5 @@
 	"peerDependencies": {
 		"eslint": ">=8"
 	},
-	"license": "ISC",
-	"private": true
+	"license": "ISC"
 }
