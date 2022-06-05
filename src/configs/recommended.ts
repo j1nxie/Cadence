@@ -371,8 +371,7 @@ parseInt("4helloworld") // 4`,
 
 		"object-shorthand": ["error", "always"],
 
-		// meh, this is some C style school of thought stuff.
-		"one-var": "off",
+		"one-var": ["error", "never"],
 
 		// handled by prettier.
 		"one-var-declaration-per-line": "off",
