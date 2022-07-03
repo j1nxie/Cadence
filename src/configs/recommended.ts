@@ -217,7 +217,11 @@ const config: Linter.Config = {
 		// superceded by ts rule
 		// "no-implied-eval": "error",
 
-		"no-inline-comments": "error",
+		// Inline comments are not preferred, but there are certain scenarios where they're just
+		// straight up nicer.
+		// Especially since we require spacing around comments and there are bugs when this comes
+		// to interface handling or function inline comments.
+		"no-inline-comments": "off",
 
 		// superceded by ts rule
 		// "no-invalid-this": "error",
