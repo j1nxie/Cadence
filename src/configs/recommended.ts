@@ -318,7 +318,7 @@ parseInt("4helloworld") // 4`,
 			{
 				selector: "ForInStatement",
 				message:
-					"The use of 'for key in object' is potentially harmful, and can retrieve keys in prototypes. Use 'for key of Object.keys(object)' instead.",
+					"The use of 'for key in object' is potentially harmful, and can retrieve keys in prototypes in some environments. Use 'for key of Object.keys(object)' instead.",
 			},
 		],
 		"no-return-assign": "error",
