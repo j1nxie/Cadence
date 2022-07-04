@@ -1,6 +1,6 @@
 # Cadence (Alpha)
 
-Cadence is an experimental, **brutally strict** ESLint config for **forcing** clean, legible and less-buggy TypeScript code.
+Cadence is an experimental, **brutally strict** ESLint config for **forcing** clean, less-buggy TypeScript code.
 
 **NOTE: Cadence is an experimental config, and in its very early phases. I can be swayed on some rules. Make a discussion or an issue on this repo and I'll get to it!**
 
@@ -165,22 +165,26 @@ If the explanation in there doesn't satisfy, feel free to open a [Discussion](ht
 
 ## Setup (Fresh Repository)
 
-You'll first need to install [ESLint](https://eslint.org/):
+You'll first need to install [ESLint](https://eslint.org/) and this plugin:
 
 ```sh
-npm i eslint --save-dev
+# Use your preferred package manager. If you don't have strong opinions on this, here's mine.
+# I would **highly** recommend pnpm, as its the most sensible.
+pnpm add eslint -D
 
-# or
+# Yarn is also pretty good, but there's a couple of pain points and generally
+# worse performance.
 yarn add eslint -D
 
-# or
-pnpm add eslint -D
+# use NPM if you have to. It's slow, riddled with design flaws, and generally a pain
+# in the ass.
+npm i eslint @cadence/ --save-dev
 ```
 
 Next, install `eslint-plugin-cadence`:
 
 ```sh
-npm install eslint-plugin-cadence --save-dev
+npm install  --save-dev
 
 # or
 yarn add eslint-plugin-cadence -D
