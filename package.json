@@ -1,7 +1,7 @@
 {
-	"name": "eslint-plugin-cadence",
-	"version": "0.0.4",
-	"description": "A pre-release, experimental, ridiculously-strict linter for TypeScript projects.",
+	"name": "@cadencejs/eslint-plugin",
+	"version": "0.1.0",
+	"description": "An experimental, **brutally strict** ESLint config for **forcing** clean, less-buggy TypeScript code.",
 	"keywords": [
 		"eslint",
 		"eslintplugin",
