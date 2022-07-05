@@ -41,24 +41,15 @@ function doStuff() {
 const users = ["joey", "tim", "bob"];
 
 // This actually happens in parallel !!
-users.forEach(async user => {
+users.forEach(async (user) => {
     console.log(`Fetching ${user}'s email...`);
     const usersEmail = await fetch(`https://example.com/api/user-email?user=${user}`).then(r => r.text());
 
     console.log(`Got ${usersEmail}!`)
 })
 
+// this is called first.
 console.log(`Done!`);
-
-// Will output something like:
-// Done!
-// -- the order of everything below this point is non-determinis tic!
-// Fetching joey's email...
-// Fetching tim's email...
-// Fetching bob's email...
-// Got joey.dev@gmail.com!
-// Got tim@example.com!
-// Got bob@example.com!
 ```
 
 When developing Cadence, I was honestly unconvinced of its merit. However, after it found **14** bugs (some of which were serious!) in one of my codebases (~50kloc), I was completely sold.
@@ -170,27 +161,15 @@ You'll first need to install [ESLint](https://eslint.org/) and this plugin:
 ```sh
 # Use your preferred package manager. If you don't have strong opinions on this, here's mine.
 # I would **highly** recommend pnpm, as its the most sensible.
-pnpm add eslint -D
+pnpm add eslint @cadence/eslint-plugin -D
 
 # Yarn is also pretty good, but there's a couple of pain points and generally
 # worse performance.
-yarn add eslint -D
+yarn add eslint @cadence/eslint-plugin -D
 
-# use NPM if you have to. It's slow, riddled with design flaws, and generally a pain
-# in the ass.
-npm i eslint @cadence/ --save-dev
-```
-
-Next, install `eslint-plugin-cadence`:
-
-```sh
-npm install  --save-dev
-
-# or
-yarn add eslint-plugin-cadence -D
-
-# or
-pnpm add eslint-plugin-cadence -D
+# use NPM if you have to. The other package managers are faster and have saner commands.
+# for example, `npm install` ignores your lockfile.
+npm i eslint @cadence/eslint-plugin --save-dev
 ```
 
 ## Usage
