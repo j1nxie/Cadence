@@ -27,14 +27,14 @@ Number.isNaN("foo"); // false
 ```
 ```js
 function doStuff() {
-    switch (foo) {
-        case "bar":
-            let thing = 5;
-            return thing;
-        case "baz":
-            let thing = 6; // SyntaxError, thing is already defined !!!
-            return thing;
-    }
+	switch (foo) {
+		case "bar":
+			let thing = 5;
+			return thing;
+		case "baz":
+			let thing = 6; // SyntaxError, thing is already defined !!!
+			return thing;
+	}
 }
 ```
 ```js
@@ -42,10 +42,10 @@ const users = ["joey", "tim", "bob"];
 
 // This actually happens in parallel !!
 users.forEach(async (user) => {
-    console.log(`Fetching ${user}'s email...`);
-    const usersEmail = await fetch(`https://example.com/api/user-email?user=${user}`).then(r => r.text());
+	console.log(`Fetching ${user}'s email...`);
+	const usersEmail = await fetch(`https://example.com/api/user-email?user=${user}`).then(r => r.text());
 
-    console.log(`Got ${usersEmail}!`)
+	console.log(`Got ${usersEmail}!`)
 })
 
 // this is called first.
@@ -73,36 +73,35 @@ We shouldn't have to think about anything other than business logic while readin
 
 ```js
 function scrimbly() {
-    const foo = "asdf";
-    const bar = 123;
-    let {more, variables} = scrobbly(bar);
-    // subFunction foos the bar and scrimbles the bimble
-    function subFunction() {
-        return 1;
-    }
-    if (statement) { 
-        doThing();
-    }
-    return foo;
+	const foo = "asdf";  
+    const bar = 123
+	let {more, variables} = scrobbly(bar);
+	// subFunction foos the bar and scrimbles the bimble
+	function subFunction() {
+		return 1;
+	}
+	if (statement) 
+		doThing();
+	return foo;
 }
 ```
 Will be **forcibly** changed to:
 ```js
 function scrimbly() {
-    const foo = "asdf";
-    const bar = 123;
-    const { more, variables } = scrobbly(bar);
+	const foo = "asdf";
+	const bar = 123;
+	const { more, variables } = scrobbly(bar);
 
-    // subFunction foos the bar and scrimbles the bimble
-    function subFunction() {
-        return 1;
-    }
+	// subFunction foos the bar and scrimbles the bimble
+	function subFunction() {
+		return 1;
+	}
 
-    if (statement) {
-        doThing();
-    }
+	if (statement) {
+		doThing();
+	}
 
-    return foo;
+	return foo;
 }
 ```
 
@@ -129,13 +128,13 @@ To get around this, use the standard ESLint ignore syntax.
 If you're doing something across your codebase that Cadence is giving you trouble about, you might want to reduce it to a warning in your `.eslintrc`.
 ```json
 {
-    "plugins": [
-        "cadence"
-    ],
-    "extends": [
-        "plugin:cadence/recommended"
-    ],
-    	"rules": {
+	"plugins": [
+		"cadence"
+	],
+	"extends": [
+		"plugin:cadence/recommended"
+	],
+		"rules": {
 		"@typescript-eslint/no-unsafe-assignment": "warn"
 	},
 }
@@ -178,12 +177,12 @@ Create an `.eslintrc` file next to your `package.json`. Fill it with the followi
 
 ```json
 {
-    "plugins": [
-        "cadence"
-    ],
-    "extends": [
-        "plugin:cadence/recommended"
-    ],
+	"plugins": [
+		"cadence"
+	],
+	"extends": [
+		"plugin:cadence/recommended"
+	],
 }
 ```
 
