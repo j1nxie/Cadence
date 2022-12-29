@@ -1,7 +1,7 @@
 import { Linter } from "@typescript-eslint/utils/dist/ts-eslint";
 import eslint from "eslint";
 import t from "tap";
-import cadenceDefaultConfig from "../src/configs/default";
+import cadenceDefaultConfig from "../src/configs/recommended";
 
 // All prettier source files need to end with a newline.
 function addTrailingLF(code: string) {

@@ -1,6 +1,6 @@
 import type { Rule } from "eslint";
+import type { Node } from "estree";
 
-// foo
 export const CaseBlocks: Rule.RuleModule = {
 	create(context) {
 		return {
@@ -43,4 +43,18 @@ export const CaseBlocks: Rule.RuleModule = {
 	meta: {
 		fixable: "code",
 	},
+};
+
+export const NoInstanceof: Rule.RuleModule = {
+	create(context) {
+		return {
+			"[operator=instanceof]"(node: Node) {
+				context.report({
+					node,
+					message: `Do not use the \`instanceof\` operator. It has many issues with TypeScript, and does not work as expected across files or environments. See https://github.com/Microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work.`,
+				});
+			},
+		};
+	},
+	meta: {},
 };

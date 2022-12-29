@@ -6,7 +6,7 @@ const config: Linter.Config = {
 		node: true,
 		es6: true,
 	},
-	plugins: ["@typescript-eslint", "import", "cadence"],
+	plugins: ["@typescript-eslint", "import"],
 	overrides: [
 		{
 			files: ["*.ts", "*.test.ts"],
@@ -32,6 +32,7 @@ const config: Linter.Config = {
 	],
 	rules: {
 		"cadence/case-blocks": "error",
+		"cadence/no-instanceof": "error",
 		"prettier/prettier": [
 			"error",
 			{
