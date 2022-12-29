@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/eslint': ^8.4.2
+  '@types/estree': ^1.0.0
   '@types/tap': ^15.0.7
   '@typescript-eslint/eslint-plugin': 5.47.1
   '@typescript-eslint/parser': 5.47.1
@@ -18,6 +19,7 @@ specifiers:
   typescript: 4.6.4
 
 dependencies:
+  '@types/estree': 1.0.0
   '@typescript-eslint/eslint-plugin': 5.47.1_cot4zj4swptcfesnixriw5pwu4
   '@typescript-eslint/parser': 5.47.1_yrtj344k46h67sdw7qqyyz3die
   eslint-config-prettier: 8.5.0_eslint@8.18.0
@@ -358,13 +360,12 @@ packages:
   /@types/eslint/8.4.2:
     resolution: {integrity: sha512-Z1nseZON+GEnFjJc04sv4NSALGjhFwy6K0HXt7qsn5ArfAKtb63dXNJHf+1YW6IpOIYRBGUbu3GwJdj8DGnCjA==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: true
 
-  /@types/estree/0.0.51:
-    resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
-    dev: true
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
