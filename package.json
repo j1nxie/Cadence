@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-cadence",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A pre-release experimental, **brutally strict** ESLint config for **forcing** clean, less-buggy TypeScript code.",
 	"keywords": [
 		"eslint",
@@ -41,7 +41,9 @@
 		"node": "12.x || 14.x || >= 16"
 	},
 	"peerDependencies": {
-		"eslint": ">=8.18"
+		"eslint": "8.18",
+		"@typescript-eslint/eslint-plugin": "5.47.1",
+		"@typescript-eslint/parser": "5.47.1"
 	},
 	"license": "ISC"
 }
