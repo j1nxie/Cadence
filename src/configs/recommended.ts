@@ -663,7 +663,7 @@ parseInt("4helloworld") // 4`,
 			// },
 		],
 
-		"@typescript-eslint/sort-type-union-intersection-members": "error",
+		"@typescript-eslint/sort-type-constituents": "error",
 
 		"@typescript-eslint/strict-boolean-expressions": [
 			"error",
