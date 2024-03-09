@@ -648,7 +648,7 @@ parseInt("4helloworld") // 4`,
 		"require-await": "off",
 		"@typescript-eslint/require-await": "error",
 
-		"@typescript-eslint/restrict-plus-operands": ["error"],
+		"@typescript-eslint/restrict-plus-operands": "error",
 
 		// this rule proved *really* frustrating. Not really sure if I care enough about it?
 		"@typescript-eslint/restrict-template-expressions": [
